@@ -7,32 +7,33 @@
 }
 /*-------------------------- header */
 header{
-    padding: 20px;
     background-color: #000000;
     height: 94px;
+    padding: 5px;
 }   
-
 header nav{
-    margin-top: 20px;
+    margin: 20px;
 }
 h1{
-    width: 50px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     background-image: url(../img/music-note.png);
     background-repeat: no-repeat;
     background-size: 100%;
     text-indent: -999999px;
     float: left;
-    margin-right: 150px;
+    margin: 12px 150px 12px 114px;
 }
+
 header h1 a{
     display: block;
-    width: 50px;
-    height: 60px;
 }
+
 header li{
     float: left;
     margin-right: 20px;
+    position: relative;
+    padding: 10px 0px;
 }
 
 header li a{
@@ -40,6 +41,21 @@ header li a{
     color: #FFFFFF;
     text-transform: uppercase;
 }
+
+header li a::before{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #f9eeee;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 2s;
+}
+
+header li a:hover::before{
+    width: 100%;
+    cursor: pointer}
 /*---------------------------------- footer */
 footer{
     padding: 20px;
@@ -82,26 +98,33 @@ footer nav li a{
     margin-top: 30px;
 } 
 /*--------------------------------- main */
-.mainn{
+.maingverdi .mainn{
     padding-top: 20px;
     padding-left: 10px;
     margin: 20px 30px;
     clear: both;
 }
-.boxebi{
+.maingverdi .boxebi{
     margin-bottom: 30px;
     float: left;
+  
 }
- article{
-    width: 100%;
+ .maingverdi article{
+    width: 33.33%;
     height: 272px;
-    float: left;
     margin: 30px;
 }
 
-section{
+.maingverdi article:hover{
+    box-shadow: 0px 0px 10px #000000;
+    width: 350px;
+    height: 350px;
+    cursor: pointer
+}
+
+.maingverdi section{
     width: 300px;
-    height: 272px;
+    height: 252px;
     border: 3px solid #000000;
     background-image: url(../img/sound.png);
     background-repeat: repeat-x;
@@ -112,7 +135,9 @@ section{
     margin: 20px 30px;
     position: relative;
 }
-.baby{
+
+
+.maingverdi .baby{
     width: 50px;
     height: 50px;
     background-image: url(../img/like.png);
@@ -122,80 +147,110 @@ section{
     top: 0;
     right: 0;
 }
-.artist::after{
+
+.maingverdi .baby:hover{
+    background-image: url(../img/like\ 2.png);
+    cursor: pointer;;
+}
+.maingverdi .artist::after{
     content: "...";
 }
-.pataraparagrafi{
+.maingverdi .pataraparagrafi{
+    width: 200px;
     margin: 20px 30px;
     color: black;
 }
 
-/*-------------------- facebook insta */
-.social{
+.maingverdi .pataraparagrafi:hover a{
+    text-decoration: underline;
+}
+
+/*------------------------------- facebook insta */
+
+.maingverdi .social{
     width: 50px;
     height: 100px;
+     top: 150px;
+    right: 0px;
     position: fixed;
+    transition: 0.5s;
+}
+
+.maingverdi .social .facebook{
+    width: 50px;
+    height: 50px;
     top: 150px;
     right: 0px;
-}
-.social .facebook, .social .instagram{
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-}
-.social .facebook img, .social .instagram img{
-    width: 100%;
-}
-/*------------------------- meore gverdi */
-.mainmeore{
-    height: 1200px;
+    background-image: url(../img/fb.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.meoregverdi1{
+.maingverdi .social .instagram{
+    idth: 50px;
+    height: 50px;
+    top: 150px;
+    right: 0px;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.maingverdi .social .facebook:hover{
+    background-image: url(../img/facebook.png);
+    cursor: pointer
+}
+.maingverdi .social .instagram:hover{
+    background-image: url(../img/instagramcolour.png);
+    cursor: pointer
+}
+/*--------------------------------- meore gverdi */
+
+.mainmeore .meoregverdi1{
     float: left;
-    padding: 10px;
-    margin-left: 5px;
-    clear: both;
-}
-.meoregverdi2{
-    float: left;
-    padding: 10px;
-    margin-left: 5px;
-
+    margin-bottom: 70px;  
+    margin-left: 50px;
 }
 
+.mainmeore .meoregverdi1 article{
+    width: 280px;
+    height: 362px;
+    padding: 20px;
+    position: relative;
+}
+.mainmeore .meoregverdi1 article:hover{
+    background-color: #f9eeee;
+    cursor: pointer;
+    box-shadow: 0 0 10px #f9eeee;
+}
 
-.otxisurati{
-    width: 300px;
-    height: 350px;
+
+.mainmeore h2{
+    margin-bottom: 30px;
+}
+
+.mainmeore .otxisurati{
+    width: 288px;
+    height: 200px;
     background-image: url(../img/sound.png);
     background-repeat: repeat-x;
     background-size: 25%;
-    margin: 50px auto;
+    background-position-y: 50px;
     position: absolute;
     top: 350px;
-    left: 350px;
+    left: 600px;
 }
 
-
-.playlist2{
-    margin-bottom: 20px;
-}
-
-.meoregverdiori{
-    padding: 10px;
-    float: left;
-}
-
-.meoregverdiorigasayofi{
+.mainmeore .sami {
     clear: both;
-    float: left;
 }
-.otxisuratiori{ 
+
+.mainmeore .otxisuratiori{ 
     width: 300px;
     height: 350px;
     background-image: url(../img/sound.png);
     background-repeat: repeat-x;
+    background-position-y: 40px;
     background-size: 25%;
     margin: 50px auto;
     position: absolute;
@@ -204,8 +259,7 @@ section{
 }
 
 
-.bolosityva{
-    /* margin: 1500px 600px; */
+.mainmeore .bolosityva{
     clear: both;
     width: 390px;
     height: 60px;
@@ -213,4 +267,44 @@ section{
     margin: 50px auto;
 }
 
- 
+
+/* facebood instagram meore gverdi */
+
+
+.mainmeore .meoregverdisocial{
+    width: 50px;
+    height: 100px;
+    top: 150px;
+    right: 0px;
+    position: fixed;
+    transition: 0.5s;
+}
+
+.mainmeore .meoregverdisocial .facebook{
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    right: 0px;
+    background-image: url(../img/fb.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mainmeore .meoregverdisocial  .instagram{
+    idth: 50px;
+    height: 50px;
+    top: 150px;
+    right: 0px;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mainmeore .meoregverdisocial .facebook:hover{
+    background-image: url(../img/facebook.png);
+    cursor: pointer
+}
+.mainmeore .meoregverdisocial .instagram:hover{
+    background-image: url(../img/instagramcolour.png);
+    cursor: pointer
+}
